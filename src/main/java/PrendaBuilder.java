@@ -17,14 +17,6 @@ public class PrendaBuilder extends PrototipoPrenda {
     }
   }
 
-  public void setTrama(Trama trama) {
-    if (trama == null) {
-      this.trama = Trama.LISA;
-    } else {
-      this.trama = trama;
-    }
-  }
-
   public void setColorPrincipal(Color colorPrincipal) {
     if (colorPrincipal == null) {
       throw new RuntimeException("El colorPrincipal no puede ser nulo");
@@ -38,7 +30,7 @@ public class PrendaBuilder extends PrototipoPrenda {
   }
 
   private boolean esBuildeable() {
-    return (tipo != null) && (material != null) && (trama != null) && (colorPrincipal != null);
+    return (tipo != null) && (material != null) && (colorPrincipal != null);
   }
 
   //El motivo por el que usamos el builder
