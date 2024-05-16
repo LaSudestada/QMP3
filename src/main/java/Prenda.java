@@ -1,14 +1,4 @@
-public class Prenda {
-  Tipo tipo;
-  Categoria categoria;
-  Material material;
-  Color colorPrincipal;
-  Color colorSecundario;
-
-
-  public Prenda(Tipo tipo, Categoria categoria, Material material, Color colorPrincipal) {
-    new Prenda(tipo, categoria, material, colorPrincipal, null);
-  }
+public class Prenda extends PrototipoPrenda {
 
   public Prenda(Tipo tipo, Categoria categoria, Material material, Color colorPrincipal, Color colorSecundario) {
     this.tipo = tipo;
