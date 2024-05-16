@@ -3,4 +3,5 @@ public abstract class PrototipoPrenda {
   Material material;
   Color colorPrincipal;
   Color colorSecundario;
+
 }

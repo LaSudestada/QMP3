@@ -7,4 +7,19 @@ public class Prenda extends PrototipoPrenda {
     this.colorSecundario = colorSecundario;
   }
 
+  public Tipo getTipo() {
+    return this.tipo;
+  }
+
+  public Material getMaterial() {
+    return this.material;
+  }
+
+  public Color getColorPrincipal() {
+    return this.colorPrincipal;
+  }
+
+  public Color getColorSecundario() {
+    return this.colorSecundario;
+  }
 }
