@@ -27,4 +27,6 @@ public class Material {
   public static Material PIQUE_LISO = new Material(Trama.LISA);
   public static Material PIQUE_RAYADO = new Material(Trama.RAYADA);
   public static Material PIQUE_CUADRILLE = new Material(Trama.CUADRILLE);
+
+  public static Material CUERO = new Material(null);
 }

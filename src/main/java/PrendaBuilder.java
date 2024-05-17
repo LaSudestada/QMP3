@@ -34,9 +34,9 @@ public class PrendaBuilder extends PrototipoPrenda {
   }
 
   //El motivo por el que usamos el builder
-  public void buildPrenda() {
+  public Prenda buildPrenda() {
     if (esBuildeable()) {
-      new Prenda(tipo, material, colorPrincipal, colorSecundario);
+      return new Prenda(tipo, material, colorPrincipal, colorSecundario);
     } else {
       throw new RuntimeException("Falta un parametro para construir la prenda");
     }
