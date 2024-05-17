@@ -1,7 +1,7 @@
 public abstract class PrototipoPrenda {
-  Tipo tipo;
-  Material material;
-  Color colorPrincipal;
-  Color colorSecundario;
+  protected Tipo tipo;
+  protected Material material;
+  protected Color colorPrincipal;
+  protected Color colorSecundario;
 
 }

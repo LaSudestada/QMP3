@@ -38,7 +38,7 @@ public class PrendaBuilder extends PrototipoPrenda {
     if (esBuildeable()) {
       return new Prenda(tipo, material, colorPrincipal, colorSecundario);
     } else {
-      throw new RuntimeException("Falta un parametro para construir la prenda");
+      throw new RuntimeException("No se puede crear la prenda por falta de parametros");
     }
   }
 
