@@ -1,10 +1,39 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import com.google.common.collect.Sets;
+import java.util.*;
 
 public class Guardarropa {
   List<Uniforme> uniformes = new ArrayList<Uniforme>();
   List<Prenda> prendas = new ArrayList<>();
+
+
+  ////////////////////////////////////////////////////
+
+  private Set<Prenda> getCalzado() {
+    return new HashSet<Prenda>(
+        prendas.
+        stream().
+        filter(prenda -> prenda.getTipo().getCategoria() == Categoria.CALZADO).
+        toList()
+    );
+  }
+
+  private Set<Prenda> getParteInferior() {
+    return new HashSet<Prenda>(
+        prendas.
+        stream().
+        filter(prenda -> prenda.getTipo().getCategoria() == Categoria.PARTE_INFERIOR).
+        toList()
+    );
+  }
+
+  private Set<Prenda> getParteSuperior() {
+    return new HashSet<Prenda>(
+        prendas.
+        stream().
+        filter(prenda -> prenda.getTipo().getCategoria() == Categoria.PARTE_SUPERIOR).
+        toList()
+    );
+  }
 
   ////////////////////////////////////////////////////
 
@@ -33,6 +62,13 @@ public class Guardarropa {
 
   public Uniforme sugerirUltimoUniforme() {
     return uniformes.get(uniformes.size() - 1);
+  }
+
+  ////////////////////////////////////////////////////
+
+  public List<List<Prenda>> combinarPrendas() {
+    Set<List<Prenda>> productoCartesiano = Sets.cartesianProduct(getParteSuperior(), getParteInferior(), getParteSuperior());
+    return productoCartesiano.stream().toList();
   }
 
   ////////////////////////////////////////////////////
